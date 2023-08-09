@@ -7,9 +7,7 @@ Things it does ..
 - Turns a 2nd monitor into a marquee display
 
 ![(https://github.com/jtisch/retrojet/webimages/dkong.jpg)](https://github.com/jtisch/retrojet/blob/main/webimages/dkong.jpg)
-![frogger](https://github.com/jtisch/retrojet/webimages/frogger.jpg)
-![gng](https://github.com/jtisch/retrojet/webimages/gng.jpg)
-![mk](https://github.com/jtisch/retrojet/webimages/mk.jpg)
+![[gng](https://github.com/jtisch/retrojet/webimages/gng.jpg)](https://github.com/jtisch/retrojet/blob/main/webimages/gng.jpg)
 
 The main reason I wrote these scripts was because previous tools I found required modifications to EmulationStation itself which is not necessary. These scripts run entirely using the built in events already available in EmulationStation to the end user.
 
