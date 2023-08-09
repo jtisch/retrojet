@@ -20,7 +20,7 @@ No modifications to EmulationStation, simply inserts into new and existing syste
 First checkout to your RetroPie root folder.
 
 1. `cd ~/RetroPie`
-2. `git clone https://github.com/jtisch/retrojet;`
+2. `git clone https://github.com/jtisch/retrojet`
 
 ### copy files
 
