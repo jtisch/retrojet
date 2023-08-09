@@ -21,20 +21,24 @@ First checkout to your RetroPie root folder.
 1. `cd ~/RetroPie`
 2. `git clone https://github.com/jtisch/retrojet;`
 
+### copy files
+
+1. `cp -Rv ~/RetroPie/retrojet/media <your media location>`
+
 ### Symlinks
 
 1. `cd /opt/retropie/configs/all`
-2. `ln -s /home/<user>/RetroPie/retrojet/runcommand-onend.pl runcommand-onend.pl`
-3. `ln -s /home/<user>/RetroPie/retrojet/runcommand-onstart.pl runcommand-onstart.pl`
+2. `ln -s ~/RetroPie/retrojet/runcommand-onend.pl runcommand-onend.pl`
+3. `ln -s ~/RetroPie/retrojet/runcommand-onstart.pl runcommand-onstart.pl`
 
 1. `cd ~/.emulationstation/scripts/game-select`
-2. `ln -s /home/<user>/RetroPie/retrojet/es-game-select.pl es-game-select.pl`
+2. `ln -s ~/RetroPie/retrojet/es-game-select.pl es-game-select.pl`
 
 1. `cd ~/.emulationstation/scripts/quit`
-2. `ln -s /home/<user>/RetroPie/retrojet/es-quit.pl es-quit.pl`
+2. `ln -s ~/RetroPie/retrojet/es-quit.pl es-quit.pl`
 
 1. `cd ~/.emulationstation/scripts/screensaver-game-select`
-2. `ln -s /home/<user>/RetroPie/retrojet/es-screensaver-game-select.pl es-screensaver-game-select.pl`
+2. `ln -s ~/RetroPie/retrojet/es-screensaver-game-select.pl es-screensaver-game-select.pl`
 
 1. `cd ~/.emulationstation/scripts/system-select`
-2. `ln -s /home/<user>/RetroPie/retrojet/es-system-select.pl es-system-select.pl`
+2. `ln -s ~/RetroPie/retrojet/es-system-select.pl es-system-select.pl`
