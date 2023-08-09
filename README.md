@@ -6,7 +6,7 @@ Things it does ..
 
 - Turns a 2nd monitor into a marquee display
 
-![dkong](https://github.com/jtisch/retrojet/webimages/dkong.jpg)
+![(https://github.com/jtisch/retrojet/webimages/dkong.jpg)](https://github.com/jtisch/retrojet/blob/main/webimages/dkong.jpg)
 ![frogger](https://github.com/jtisch/retrojet/webimages/frogger.jpg)
 ![gng](https://github.com/jtisch/retrojet/webimages/gng.jpg)
 ![mk](https://github.com/jtisch/retrojet/webimages/mk.jpg)
