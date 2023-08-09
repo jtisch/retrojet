@@ -10,6 +10,5 @@ The scripts were developed under Retropi x86 but they should work on a regular p
 
 First checkout to your RetroPie root folder.
 
-`cd ~/RetroPie
-git clone https://github.com/jtisch/retrojet --recurse`
+`cd ~/RetroPie; git clone https://github.com/jtisch/retrojet --recurse`
 
