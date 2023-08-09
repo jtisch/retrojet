@@ -14,5 +14,23 @@ The scripts were developed under Retropi x86 but they should work on a regular p
 
 First checkout to your RetroPie root folder.
 
-`cd ~/RetroPie; git clone https://github.com/jtisch/retrojet --recurse;`
+`cd ~/RetroPie;
+git clone https://github.com/jtisch/retrojet`
 
+symlinks
+
+`cd /opt/retropie/configs/all
+ln -s /home/<user>/RetroPie/retrojet/runcommand-onend.pl runcommand-onend.pl
+ln -s /home/<user>/RetroPie/retrojet/runcommand-onstart.pl runcommand-onstart.pl`
+
+`cd ~/.emulationstation/scripts/game-select
+ln -s /home/<user>/RetroPie/retrojet/es-game-select.pl es-game-select.pl`
+
+`cd ~/.emulationstation/scripts/quit
+ln -s /home/<user>/RetroPie/retrojet/es-quit.pl es-quit.pl`
+
+`cd ~/.emulationstation/scripts/screensaver-game-select
+ln -s /home/<user>/RetroPie/retrojet/es-screensaver-game-select.pl es-screensaver-game-select.pl `
+
+`cd ~/.emulationstation/scripts/system-select
+ln -s /home/<user>/RetroPie/retrojet/es-system-select.pl es-system-select.pl`
