@@ -28,10 +28,6 @@ First checkout to your RetroPie root folder.
 
 ### Symlinks
 
-1. `cd /opt/retropie/configs/all`
-2. `ln -s ~/RetroPie/retrojet/runcommand-onend.pl runcommand-onend.pl`
-3. `ln -s ~/RetroPie/retrojet/runcommand-onstart.pl runcommand-onstart.pl`
-
 1. `cd ~/.emulationstation/scripts/game-select`
 2. `ln -s ~/RetroPie/retrojet/es-game-select.pl es-game-select.pl`
 
