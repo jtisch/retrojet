@@ -19,6 +19,12 @@ No modifications to EmulationStation, simply inserts into new and existing syste
 
 ## Install
 
+# Dependencies
+
+1. [geeqie](https://github.com/BestImageViewer/geeqie) - Image viewer used, couldn't stop feh from auto-focusing on image load)
+
+# Download
+
 First checkout to your RetroPie root folder.
 
 1. `cd ~/RetroPie`
