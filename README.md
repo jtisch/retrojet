@@ -28,7 +28,7 @@ First checkout to your RetroPie root folder.
 1. `cd ~/RetroPie`
 2. `git clone https://github.com/jtisch/retrojet`
 
-### Add enfironment variable
+### Add environment variable
 
 1. Add an environment vairable called "RETROJET_HOME" which points to your RetroPie root folder. This is usually your home folder + RetroPie IE: /home/user/RetroPie. This can be set by updating your ~/.bashrc file.
 
