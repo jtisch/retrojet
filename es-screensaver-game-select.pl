@@ -1,16 +1,15 @@
 #!/usr/bin/perl
 #########################################
 # Emulationstation - screensaver-game-select script
-# Created by: John Tisch 6/2023
+# Created by: John Tisch
 #########################################
 use strict;
 use warnings;
 use File::Basename;
-use File::Copy;
 
 # goo for common stuff for my retro scripts
 require "$ENV{RETROJET_HOME}/retrojet/retrojet.pl";
-our ($BASE_PATH, $RP_PATH, $SCRIPT_PATH, $MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
+our ($MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
 
 # short circuit if no 2nd monitor
 if ($USE_SEC_MON eq 0) {
@@ -65,7 +64,6 @@ if ($inSYSTEMNAME eq 'recent' || $inSYSTEMNAME eq 'all' || $inSYSTEMNAME eq 'col
 }
 
 # arcade?
-#$EMUSYS = (lc($EMUSYS) =~ /(arcade|mame)/) ? "arcade" : $inSYSTEMNAME;
 $EMUSYS = $inSYSTEMNAME;
 print $fh "System: $EMUSYS\n";
 
