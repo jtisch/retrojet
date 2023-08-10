@@ -6,11 +6,10 @@
 use strict;
 use warnings;
 use File::Basename;
-use File::Copy;
 
 # Common include for retrojet scripts
 require "$ENV{RETROJET_HOME}/retrojet/retrojet.pl";
-our ($BASE_PATH, $RP_PATH, $SCRIPT_PATH, $MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
+our ($MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
 
 # short circuit if no 2nd monitor
 if ($USE_SEC_MON eq 0) {
@@ -23,8 +22,8 @@ if ($USE_SEC_MON eq 0) {
 my $LOGFILE = "/tmp/es-game-select.log";
 my $IMGROOT = "$MEDIA_PATH/%s/titles";
 my $SYSTEMROOT = "$MEDIA_PATH/system/titles";
-my $DEFIMG = $SYSTEMROOT . "/arcade.png";
-my $GQCMD = "/usr/bin/geeqie --geometry=$GEEQIE_GEOMETRY -t -f -r File:\"%s\"";
+my $DEFIMG = "$SYSTEMROOT/arcade.png";
+my $GQCMD = "$GEEQIE_PATH --geometry=$GEEQIE_GEOMETRY -t -f -r File:\"%s\"";
 
 #################
 # Create log file
@@ -51,6 +50,7 @@ print $fh "ACCESSTYPE: $inACCESSTYPE\n";
 sub displayImage {
    my($inIMGPATH) = @_;
    print $fh "DSPIMG: $inIMGPATH\n";
+   # image found so display and exit
    if (-e "$inIMGPATH") {
         system(sprintf($GQCMD, $inIMGPATH));
         exit 0;
@@ -59,7 +59,7 @@ sub displayImage {
 }
 
 #################################
-# Script Start
+# Main script start
 #################################
 
 ###################
