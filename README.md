@@ -36,16 +36,14 @@ First checkout to your RetroPie root folder.
 
 1. `cp -Rv ~/RetroPie/retrojet/media <your media location>`
 
-### Symlinks
+### Configure for your environment
 
-1. `cd ~/.emulationstation/scripts/game-select`
-2. `ln -s ~/RetroPie/retrojet/es-game-select.pl es-game-select.pl`
+Before using you must configure jetretro. This is very important!
 
-1. `cd ~/.emulationstation/scripts/quit`
-2. `ln -s ~/RetroPie/retrojet/es-quit.pl es-quit.pl`
+1. `cd ~/RetroPie/retrojet`
+2. `nano retrojet.pl`
 
-1. `cd ~/.emulationstation/scripts/screensaver-game-select`
-2. `ln -s ~/RetroPie/retrojet/es-screensaver-game-select.pl es-screensaver-game-select.pl`
+### Run setup script
 
-1. `cd ~/.emulationstation/scripts/system-select`
-2. `ln -s ~/RetroPie/retrojet/es-system-select.pl es-system-select.pl`
+1. `cd ~/RetroPie/retrojet`
+2. `./setup.pl`
