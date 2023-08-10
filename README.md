@@ -21,14 +21,18 @@ No modifications to EmulationStation, simply inserts into new and existing syste
 
 1. [geeqie](https://github.com/BestImageViewer/geeqie) - Image viewer used. Check your distro it migfht already be included.
 
-# Download
+### Download
 
 First checkout to your RetroPie root folder.
 
 1. `cd ~/RetroPie`
 2. `git clone https://github.com/jtisch/retrojet`
 
-### copy files
+### Add enfironment variable
+
+1. Add an environment vairable called "RETROJET_HOME" which points to your RetroPie root folder. This is usually your home folder + RetroPie IE: /home/user/RetroPie. This can be set by updating your ~/.bashrc file.
+
+### Copy media files
 
 1. `cp -Rv ~/RetroPie/retrojet/media <your media location>`
 
