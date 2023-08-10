@@ -4,7 +4,7 @@ A set of perl scripts for RetroPie & EmulationStation (ubuntu/x86 and Raspberry 
 
 Things it does ..
 
-- Turns a 2nd monitor into a marquee display
+- Turns a 2nd monitor into a marquee display. Displays any artwork you wish on a 2nd monitor during game selection and screensaver cycling.
 
 ![(https://github.com/jtisch/retrojet/webimages/dkong.jpg)](https://github.com/jtisch/retrojet/blob/main/webimages/dkong.jpg)
 ![[gng](https://github.com/jtisch/retrojet/webimages/gng.jpg)](https://github.com/jtisch/retrojet/blob/main/webimages/gng.jpg)
