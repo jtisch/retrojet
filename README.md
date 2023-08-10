@@ -21,7 +21,7 @@ No modifications to EmulationStation, simply inserts into new and existing syste
 
 # Dependencies
 
-1. [geeqie](https://github.com/BestImageViewer/geeqie) - Image viewer used, couldn't stop feh from auto-focusing on image load)
+1. [geeqie](https://github.com/BestImageViewer/geeqie) - Image viewer used. Check your distro it migfht already be included.
 
 # Download
 
