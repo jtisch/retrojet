@@ -7,7 +7,7 @@ use warnings;
 
 # goo for common stuff for my retro scripts
 require "$ENV{RETROJET_HOME}/retrojet/retrojet.pl";
-our ($SCRIPT_PATH, $MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
+our ($MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
 
 # force a sleep to prevent es going into background
 print "Delay 2 seconds ...\n";
