@@ -1,5 +1,7 @@
 # retrojet
 
+8/10/2023 - THIS PROJECT IS NOT READY FOR CONSUMPTION YET, COMING SOON ...
+
 A set of perl scripts for RetroPie & EmulationStation (ubuntu/x86 and Raspberry Pi)
 
 Things it does ..
