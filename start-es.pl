@@ -15,7 +15,7 @@ sleep (2);
 
 # kill/start marquee viewer
 print "Close any instances of geeqie ...\n";
-system("killall -s HUP $GEEQIE_PATH");
+system("killall $GEEQIE_PATH");
 if ($USE_SEC_MON eq 1) {
 	print "Open geeqie with default image ...\n";
 	system("$GEEQIE_PATH --geometry=$GEEQIE_GEOMETRY -t -f \"$MEDIA_PATH/system/titles/arcade.png\" &");
