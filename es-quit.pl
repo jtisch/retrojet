@@ -8,7 +8,7 @@ use warnings;
 
 # goo for common stuff for my retro scripts
 require "$ENV{RETROJET_HOME}/retrojet/retrojet.pl";
-our ();
+our ($USE_SEC_MON);
 
 #################################
 # short circuit if no 2nd monitor
