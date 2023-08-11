@@ -1,1 +1,1 @@
-# system media folder
+# media/system media folder

@@ -1,1 +1,1 @@
-# mame-libretro media folder
+# media/mame-libretro media folder
