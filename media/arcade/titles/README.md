@@ -1,0 +1,1 @@
+# media/arcade/titles folder
