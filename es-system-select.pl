@@ -6,15 +6,16 @@
 use strict;
 use warnings;
 use File::Basename;
-use File::Copy;
 
 # goo for common stuff for my retro scripts
 require "$ENV{RETROJET_HOME}/retrojet/retrojet.pl";
 our ($MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
 
+#################################
 # short circuit if no 2nd monitor
-if ($USE_SEC_MON eq 0) {
-	exit 0;
+# ###############################
+if ($USE_SEC_MON == 0) {
+        exit 0;
 }
 
 my $LOGFILE = "/tmp/es-system-select.log";

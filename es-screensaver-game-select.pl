@@ -11,9 +11,11 @@ use File::Basename;
 require "$ENV{RETROJET_HOME}/retrojet/retrojet.pl";
 our ($MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
 
+#################################
 # short circuit if no 2nd monitor
-if ($USE_SEC_MON eq 0) {
-	exit 0;
+# ###############################
+if ($USE_SEC_MON == 0) {
+        exit 0;
 }
 
 my $LOGFILE = "/tmp/es-screensaver-game-select.log";
