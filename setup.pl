@@ -28,12 +28,14 @@ foreach my $scrFile (@SCRIPTFILES1) {
 	print "Setting executable bits for: $tmpExe\n";
 	chmod(0755, $tmpExe) or die "Unable to set executable bit, run as retropie user: $!\n";
 
-	# make sure es script folders exist
+	# make sure ES script folder exist
 	my $tmpScr = "$HOMEDIR/$scrFile->{path}";
 	if (! -d $tmpScr) {
 		print "Creating folder: $tmpScr\n";
 		mkdir ($tmpScr) or die "Unable to create folder: $!\n";
 	}
+
+	# create symbolic link
 	$tmpScr = "$HOMEDIR/$scrFile->{path}/$scrFile->{name}.pl";
 	if (-l $tmpScr) {
 		print "Removing old link: $tmpScr\n";
