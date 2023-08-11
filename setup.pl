@@ -13,31 +13,37 @@ our ($MEDIA_PATH, $GEEQIE_GEOMETRY, $GEEQIE_PATH, $USE_SEC_MON);
 my $HOMEDIR = $ENV{HOME};
 print "Current user home folder: $HOMEDIR\n";
 
-# change permissions on scripts
-print "Setting executable rights for scripts\n";
-system("chmod +x $HOMEDIR/RetroPie/retrojet/es-*");
+my @SCRIPTFILES1 = (
+	{ name => "es-game-select", path => ".emulationstation/scripts/game-select" },
+	{ name => "es-quit", path => ".emulationstation/scripts/quit" },
+	{ name => "es-screensaver-game-select", path => ".emulationstation/scripts/screensaver-game-select" },
+	{ name => "es-system-select", path => ".emulationstation/scripts/system-select" }
+);
 
-# create symbolic links
-print "Creating symbolic links for scripts\n";
-if (! -d "$HOMEDIR/.emulationstation/scripts/game-select") {
-	mkdir ("$HOMEDIR/.emulationstation/scripts/game-select");
+# Process script files
+foreach my $scrFile (@SCRIPTFILES1) {
+
+	# set executable bits
+	my $tmpExe = "$HOMEDIR/RetroPie/retrojet/$scrFile->{name}.pl";
+	print "Setting executable bits for: $tmpExe\n";
+	chmod(0755, $tmpExe) or die "Unable to set executable bit, run as retropie user: $!\n";
+
+	# make sure es script folders exist
+	my $tmpScr = "$HOMEDIR/$scrFile->{path}";
+	if (! -d $tmpScr) {
+		print "Creating folder: $tmpScr\n";
+		mkdir ($tmpScr) or die "Unable to create folder: $!\n";
+	}
+	$tmpScr = "$HOMEDIR/$scrFile->{path}/$scrFile->{name}.pl";
+	if (-l $tmpScr) {
+		print "Removing old link: $tmpScr\n";
+		unlink ($tmpScr) or die "Unable to remove old symlink, run as retropie user?: $!\n";
+	}
+	my $tmpLnk = "$HOMEDIR/RetroPie/retrojet/$scrFile->{name}.pl";
+	print "Creating link: $tmpLnk -> $tmpScr\n";
+	if (symlink ($tmpLnk, $tmpScr) == 0) {
+		die "Unable to create symbolic link, run as retropie user?: $!\n";
+	}
 }
-system("ln -s $HOMEDIR/RetroPie/retrojet/es-game-select.pl $HOMEDIR/.emulationstation/scripts/game-select/es-game-select.pl");
-
-
-if (! -d "$HOMEDIR/.emulationstation/scripts/quit") {
-        mkdir ("$HOMEDIR/.emulationstation/scripts/quit");
-}
-system("ln -s $HOMEDIR/RetroPie/retrojet/es-quit.pl $HOMEDIR/.emulationstation/scripts/quit/es-quit.pl");
-
-if (! -d "$HOMEDIR/.emulationstation/scripts/screensaver-game-select") {
-	mkdir ("$HOMEDIR/.emulationstation/scripts/screensaver-game-select");
-}
-system("ln -s $HOMEDIR/RetroPie/retrojet/es-screensaver-game-select.pl $HOMEDIR/.emulationstation/scripts/screensaver-game-select/es-screensaver-game-select.pl");
-
-if (! -d "$HOMEDIR/.emulationstation/scripts/system-select") {
-	mkdir ("$HOMEDIR/.emulationstation/scripts/system-select");
-}
-system("ln -s $HOMEDIR/RetroPie/retrojet/es-system-select.pl $HOMEDIR/.emulationstation/scripts/system-select/es-system-select.pl");
 
 exit 0;
